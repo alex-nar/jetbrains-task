@@ -1,4 +1,4 @@
-package com.alexnar.jetbrains.task.configuration
+package com.alexnar.jetbrains.task.controller
 
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
