@@ -8,8 +8,11 @@
 Контент находится в папке **./content**.
 
 ## API
-POST localhost:8080/query
-```json
+```http request
+POST /query HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
 {
     "query": "$",
     "resourceId": "default.json"
