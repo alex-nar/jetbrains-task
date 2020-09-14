@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jetbrains test task</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="content/index.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<form>
+    <h3>Readme</h3>
+    <p>В качестве реализации поиска по json используется библиотека https://github.com/json-path/JsonPath</p>
+    <p>В данной библиотеке определен язык поиска</p>
+    <p>Ниже представлены несколько примеров</p>
+    <ul>
+        <li>$ - вывести полный JSON</li>
+        <li>$.products - вывести список продуктов</li>
+        <li>$.products[1] - получить 2й продукт в списке</li>
+        <li>$.products[1].A2.description - получить описание 2го продукта в списке</li>
+        <li>$.products[*].*.description - получить описания всхе продуктов</li>
+
+    </ul>
+    <div class="form-row align-items-center">
+        <div class="col-auto">
+            <input type="text" class="form-control mb-2" id="queryInput" placeholder="Напишите ваш query">
+        </div>
+        <div class="col-auto">
+            <input type="button" class="btn btn-primary mb-2" id="submitBtn" value="Отправить"/>
+        </div>
+    </div>
+    <div class="alert alert-danger" role="alert" id="errorAlert">
+
+    </div>
+    <h3>Ответ</h3>
+    <pre id="json"></pre>
+</form>
+</body>
+</html>

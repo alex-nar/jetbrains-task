@@ -12,6 +12,7 @@ class QueryService(
         private val jsonFilter: JsonFilter
 ) {
     fun query(query: FileQueryRq): BaseJsonNode {
+        if (query.query.isBlank()) throw QueryException("Query can not be blank")
         val resourceContent = handleResourceReceiving(query)
         return jsonFilter.filter(resourceContent, query.query)
     }

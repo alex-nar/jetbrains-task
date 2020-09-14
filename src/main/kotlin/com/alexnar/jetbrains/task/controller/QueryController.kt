@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode
 import com.fasterxml.jackson.databind.node.BaseJsonNode
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class QueryController(private val queryService: QueryService) {
 
-    @GetMapping(value = [ "/query" ], consumes = [MediaType.APPLICATION_JSON_VALUE], produces = [MediaType.APPLICATION_JSON_VALUE])
+    @PostMapping(value = [ "/query" ], consumes = [MediaType.APPLICATION_JSON_VALUE], produces = [MediaType.APPLICATION_JSON_VALUE])
     fun queryFile(@RequestBody fileQueryRq: FileQueryRq): BaseJsonNode {
         return queryService.query(fileQueryRq)
     }
