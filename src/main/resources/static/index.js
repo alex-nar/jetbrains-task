@@ -9,7 +9,7 @@ $(document).ready(function () {
             "headers": {
                 "Content-Type": "application/json"
             },
-            "data": JSON.stringify({"query": query, "resourceId": "default.json"}),
+            "data": JSON.stringify({"query": query}),
         };
 
         $.ajax(settings)
