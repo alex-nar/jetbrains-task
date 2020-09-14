@@ -1,7 +1,6 @@
 package com.alexnar.jetbrains.task.repository
 
 import com.alexnar.jetbrains.task.repository.exception.ResourceNotFoundException
-import com.alexnar.jetbrains.task.service.exception.QueryException
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 import java.io.File

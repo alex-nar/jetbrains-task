@@ -6,6 +6,7 @@ import com.alexnar.jetbrains.task.service.dto.FileQueryRq
 import com.alexnar.jetbrains.task.service.exception.QueryException
 import com.fasterxml.jackson.databind.node.BaseJsonNode
 import org.springframework.stereotype.Service
+
 @Service
 class QueryService(
         private val resourceRepository: ResourceRepository,
